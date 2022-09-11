@@ -5,6 +5,6 @@ internal static class JsonExtensions
     public static JsonElement? ToJsonElement<T>(this T source, JsonSerializerOptions? options = null)
     {
         if (source == null) return null;
-        return JsonSerializer.SerializeToDocument(source, options).RootElement;
+        return JsonSerializer.SerializeToElement(source, options);
     }
 }
